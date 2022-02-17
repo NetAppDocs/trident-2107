@@ -157,7 +157,12 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
+  <script src='/us-en/trident-2107/js/version-dropdown.js'></script>
   <script src='/us-en/trident-2107/js/product-family.js'></script>
+  <script src='/us-en/trident-2107/js/FileSaver.min.js'></script>
+  <script src='/us-en/trident-2107/js/jszip-utils.min.js'></script>
+  <script src='/us-en/trident-2107/js/jszip.min.js'></script>
+  <script src='/us-en/trident-2107/js/pdf-ux.js'></script>
 </head>
 
 
@@ -261,7 +266,34 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><!-- End Language Selector -->
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">English</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/trident-2107/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/trident-2107/trident-get-started/kubernetes-customize-deploy-tridentctl.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/trident-2107/trident-get-started/kubernetes-customize-deploy-tridentctl.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/trident-2107/trident-get-started/kubernetes-customize-deploy-tridentctl.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/trident-2107/trident-get-started/kubernetes-customize-deploy-tridentctl.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
   </div>
@@ -295,95 +327,56 @@
   <!-- End property bar -->
 </header>
 
-        <div class="ie-utility">
-  <div class="ie-menu">
-    <div class="n-breadcrumb">
-      <ul class="n-breadcrumb__list">
-        <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">Home</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">Documentation</a>
-        </li>
-        
-
-        <li class="n-breadcrumb__list-item">
-          <a href="/us-en/trident-2107/">Astra&nbsp;Trident</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          Customize <code>tridentctl</code> deployment
-        </li>
-      </ul>
-    </div>
-
-    <div style="clear: both"></div><!-- Main needs to have height -->
-  </div>
-</div>
-
 
         <main id="n-main-content" class="n-main-content">
           <!-- Start Documentation Content -->
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
-  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDFs<span>
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>Available PDFs<span>
     </span>
   </a>
 </div>
-<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
-      <span class="n-pdf-section-title">Site</span>
-    </div>
-    <li>
-      <a target="_blank" href="/us-en/trident-2107/pdfs/fullsite-sidebar/Astra_Trident_21_07_documentation.pdf" >
-        <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
-        Astra Trident 21.07 documentation
-      </a>
-    </li>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/us-en/trident-2107/pdfs/fullsite-sidebar/Astra_Trident_21_07_documentation.pdf" >
+          <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
 
 
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Concepts.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Concepts
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -391,25 +384,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Get_started.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Get started
           </a>
-        </li>
-        <span>
           
 
 
@@ -419,27 +403,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Deploy_with_Trident_operator.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Deploy with Trident operator
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -447,52 +427,43 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Deploy_with_tridentctl.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Deploy with tridentctl
           </a>
-        </li>
-        <span>
           
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">This page</span>
-</div>
-
-<li class="active">
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/us-en/trident-2107/pdfs/pages/trident-get-started/kubernetes-customize-deploy-tridentctl.pdf" >
-    <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
-    Customize <code>tridentctl</code> deployment
+    <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
+    PDF of this page
   </a>
 </li>
 
-
+</ul>
   
-
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
-
 
 
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -500,41 +471,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Manage_Astra_Trident.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Manage Astra Trident
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -542,41 +503,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Use_Astra_Trident.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Use Astra Trident
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Configure_backends.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Configure backends
           </a>
-        </li>
-        <span>
           
 
 
@@ -588,29 +537,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Configure_a_backend_with_ONTAP_SAN_drivers.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Configure a backend with ONTAP SAN drivers
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -618,29 +563,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Configure_a_backend_with_ONTAP_NAS_drivers.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Configure a backend with ONTAP NAS drivers
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -649,10 +590,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -670,33 +610,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Perform_volume_operations.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Perform volume operations
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -709,10 +645,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -720,25 +655,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Astra_Trident_for_Docker.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Astra Trident for Docker
           </a>
-        </li>
-        <span>
           
 
 
@@ -748,27 +674,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Work_with_volumes.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Work with volumes
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -783,10 +705,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -800,41 +721,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Best_practices_and_recommendations.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Best practices and recommendations
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -842,43 +753,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/trident-2107/pdfs/sidebar/Reference.pdf" 
             
           >
-            <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/trident-2107/images/pdf.png" width="16" height="16"/>
             Reference
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -888,15 +789,44 @@
 
 
 
-</ul>
-
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/us-en/trident-2107/images/pdf-zip.png" width="16" height="16"/>
+      <pre>Collection of separate PDF docs<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
 <script>
-  $("#toggleContainerPdf li.active").parents('li').toggle('display');
-  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
   $("#toggleButtonPdf").click(function () {
     $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/trident-2107/index.html">
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/trident-2107/index.html">
         Astra Trident 21.07 docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident-2107/trident-rn.html">
         Release notes
@@ -1067,7 +997,14 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident-2107/legal.html">
         Legal notices
       </a></li></ul>
-
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -1077,6 +1014,30 @@
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
     <!-- Begin of page container -->
     <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/trident-2107/">Astra&nbsp;Trident</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Customize <code>tridentctl</code> deployment
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
       <div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">Customize <code>tridentctl</code> deployment</h1>
 </div>
@@ -1085,26 +1046,12 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-20 16:03:10 +0000">10/20/2021</time>
+    <time datetime="2022-02-17 07:02:19 +0000">02/17/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" href="https://github.com/netapp-amitha">
-    <img  class="avatar avatar-small"
-          alt="netapp-amitha"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/42010398?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
-
-
-  <span>
-    <a target="_blank" href="/us-en/trident-2107/pdfs/pages/trident-get-started/kubernetes-customize-deploy-tridentctl.pdf" role="button">
-      <img src="/us-en/trident-2107/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
-  </span>
 
 
 </p>
@@ -1178,11 +1125,11 @@ Automatic worker node preparation is a <strong>beta feature</strong> meant to be
   
   <!-- Start Page Toolbar -->
   <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <div class="page-nav-contribute-title">CONTRIBUTE</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/trident-2107/blob/main/trident-get-started/kubernetes-customize-deploy-tridentctl.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/trident-2107/images/github.png" class="github-icon" />Edit on GitHub</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/trident-2107/issues/new?body=Page%3A%20[Customize <code>tridentctl</code> deployment](https://docs.netapp.com/us-en/trident-2107/trident-get-started/kubernetes-customize-deploy-tridentctl.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/trident-2107/images/github.png" class="github-icon" />Request doc changes</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/trident-2107/issues/new?body=Page%3A%20[Customize <code>tridentctl</code> deployment](https://docs.netapp.com/us-en/trident-2107/trident-get-started/kubernetes-customize-deploy-tridentctl.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/trident-2107/images/discuss-sm.svg" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/trident-2107/blob/main/trident-get-started/kubernetes-customize-deploy-tridentctl.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident-2107/images/edit-sm.svg" class="github-icon" />Edit this page</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident-2107/images/article-sm.svg" class="github-icon" />Learn how to contribute</a>
     </div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
@@ -1207,7 +1154,7 @@ Automatic worker node preparation is a <strong>beta feature</strong> meant to be
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
 
 </ul>
