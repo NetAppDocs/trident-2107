@@ -1110,11 +1110,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-20 16:03:10 +0000">10/20/2021</time>
+    <time datetime="2022-05-18 16:40:11 +0000">05/18/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1556,6 +1564,12 @@ Make sure to remove the DP mode or put the volume online before importing the vo
 <p>Restart the application pod.</p>
 </li>
 </ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="can-trident-provision-volumes-on-svms-that-have-a-load-sharing-mirror-configured">Can Trident provision volumes on SVMs that have a Load-Sharing Mirror configured?</h3>
+<div class="paragraph">
+<p>Load-sharing mirrors can be created for root volumes of SVMs that serve data over NFS. ONTAP automatically updates load-sharing mirrors for volumes that have been created by Trident. This may result in delays in mounting volumes. When multiple volumes are created using Trident, provisioning a volume is dependent on ONTAP updating the load-sharing mirror.</p>
 </div>
 </div>
 <div class="sect2">
