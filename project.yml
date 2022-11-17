@@ -1,11 +1,11 @@
 ---
 settings:
   name: Astra Trident
-  platform: ''
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
+    harmony_enabled: true
 sidebar:
   entries:
     - title: Astra Trident 21.07 docs
