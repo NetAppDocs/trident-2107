@@ -6,6 +6,13 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  versions:
+    - name: Astra Trident
+      url: /trident-2107
+      version-number: "21.07"
+    - name: Astra Trident
+      url: /trident
+      version-number: "23.07"
 sidebar:
   entries:
     - title: Astra Trident 21.07 docs
