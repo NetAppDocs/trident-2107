@@ -1,6 +1,8 @@
 ---
 settings:
   name: Astra Trident
+  rss_page: "/whats-new.html"
+  downlevel: true
   internal:
     pdf_enabled: true
   prod:
