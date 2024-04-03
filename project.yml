@@ -2,12 +2,12 @@
 settings:
   name: Astra Trident
   rss_page: "/whats-new.html"
-  downlevel: true
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  downlevel: true
   versions:
     - version-number: "21.07"
       url: /trident-2107  
