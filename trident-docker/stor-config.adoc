@@ -547,16 +547,7 @@ a|“10T”
     "projectNumber": "012345678901",
     "apiRegion": "us-west2",
     "apiKey": {
-        "type": "service_account",
-        "project_id": "my-gcp-project",
-        "private_key_id": "<id_value>",
-        "private_key": "<key_value>",
-        "client_email": "cloudvolumes-admin-sa@my-gcp-project.iam.gserviceaccount.com",
-        "client_id": "<id_value>",
-        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-        "token_uri": "https://oauth2.googleapis.com/token",
-        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudvolumes-admin-sa%40my-gcp-project.iam.gserviceaccount.com"
+        <key_value>
     },
     "proxyURL": "http://proxy-server-hostname/"
 }
