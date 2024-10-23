@@ -546,7 +546,6 @@ a|“10T”
     "storageDriverName": "gcp-cvs",
     "projectNumber": "<num_value>",
     "apiRegion": "us-west2",
-    "apiKey": {<key_value>},
     "proxyURL": "http://proxy-server-hostname/"
 }
 ----
